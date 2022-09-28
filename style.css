@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Quicksand', verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* jumbotron */
+.jumbotron {
+  font-size: 20px;
+  text-align: center;
+
+  padding: 50px;
+  background-image: url(assets/image/jumbotron.JPG);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 300px;
+  color: white;
+}
+
+header {
+  display: inline;
+}
+header h1 {
+  background-color: #00a2c6;
+  display: inline;
+  border-radius: 10%;
+  line-height: 200px;
+}
+/* navigasi */
+nav {
+  background-color: #006076;
+  padding: 8px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 100;
+}
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+/* main */
+#content {
+  float: left;
+  width: 75%;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+h2,
+h3 {
+  color: #00a2c6;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.profile header {
+  text-align: center;
+}
+
+/* legend */
+article h2 {
+  text-align: center;
+}
+
+.container {
+  width: 605px;
+  border: 2px solid lightblue;
+  background-color: rgba(20, 20, 20, 0.5);
+
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(5, 5, 5, 0.5); */
+  background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(5, 5, 5, 1));
+  top: 200px;
+  transition: all 5s ease-in;
+}
+
+.img-title p,
+h3 {
+  text-align: center;
+  color: #fff;
+  line-height: 2px;
+  position: relative;
+  top: 100px;
+  text-shadow: 1px 1px rgba(5, 5, 5 0.5);
+}
+
+.card-title:hover .img-title {
+  top: 0;
+  transition: all 0.5s;
+}
+
+.card-title img {
+  transition: all 0.3s;
+}
+
+.card-title:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+a {
+  line-height: 0;
+}
+
+/* trofi */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.table th {
+  background-color: #006076;
+
+  color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 19px;
+}
+
+aside section table {
+  margin: auto;
+  text-align: justify;
+}
+.profile img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* footer */
+footer {
+  padding: 15px;
+  color: white;
+  background-color: #006076;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* responsive */
+@media screen and (max-width: 1200px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 405px;
+  }
+}
+@media screen and (max-width: 567px) {
+  .jumbotron {
+    display: none;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 15px;
+  }
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
